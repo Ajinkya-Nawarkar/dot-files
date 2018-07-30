@@ -15,13 +15,16 @@
 
 [alias]
   aa = add --all
-  amend = commit --amend
-  cleanup = "!git remote prune origin && git checkout -q master && git for-each-ref refs/heads/ '--format=%(refname:short)' | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == '-'* ]] && git branch -D $branch; done"
+  sa = status
   co = checkout
-  ci = commit
-  ctags = "!${GIT_DIR}/hooks/ctags"
+  ci = commit -m
   dc = diff --cached
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+[alias] 
+  amend = commit --amend
+  cleanup = "!git remote prune origin && git checkout -q master && git for-each-ref refs/heads/ '--format=%(refname:short)' | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == '-'* ]] && git branch -D $branch; done"
+  ctags = "!${GIT_DIR}/hooks/ctags"
   mff = merge --ff-only
   pff = pull --ff-only
 
