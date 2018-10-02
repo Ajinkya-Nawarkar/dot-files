@@ -18,5 +18,5 @@ Install the following dependencies:
 ## Sample Outputs: 
 
 SLP: 
-![SLP](slp.png)
-![BackProp](backprop.png)
+![SLP](slp.PNG)
+![BackProp](backprop.PNG)
