@@ -18,6 +18,7 @@
   sa = status
   co = checkout
   ci = commit -m
+  ac = commit -a -m
   po = push origin
   pod = push origin --delete
   dc = diff --cached
