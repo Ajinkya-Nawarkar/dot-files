@@ -1,17 +1,3 @@
-[user]
-  email = <>@gmail.com
-  name = Ajinkya Nawarkar
-  
-
-[github]
-  user = Ajinkya-Nawarkar
-
-[commit]
-  gpgsign = true
-
-[core]
-  editor = nvim
-  excludesfile = ~/.config/gitignore_global
 
 [alias]
   aa = add --all
