@@ -23,11 +23,19 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+# Interactive operation...
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Default to human readable figures
+alias df='df -h'
+alias du='du -h'
+
 alias now="nowtime && nowdate"
 alias nowtime='date +"%T"'
 alias nowdate='date +"%d-%m-%Y"'
 
-alias vi=vim
 alias svi='sudo vi'
 alias vis='vim "+set si"'
 alias edit='vim'
@@ -42,6 +50,13 @@ alias wget='wget -c'
 
 # To open last edited file
 alias lvim="!vi"
+
+# To open File in installed sublime text editor
+alias nsubl="subl.exe -n"
+alias asubl="subl.exe -a"
+
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
 
 # runs `source` for you once you save&exit the file. `source` picks up changes in the file.
 alias bashrc="vim ~/.bashrc && source ~/.bashrc"
