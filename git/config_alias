@@ -8,4 +8,7 @@
   po = push origin
   pod = push origin --delete
   dc = diff --cached
+  fu = fetch upstream/master
+  mm = merge upstream/master
+  rh = reset HEAD
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
